@@ -67,7 +67,7 @@ MODULE RRC_DataTask_Ctrl(SYSMODULE)
     ! Declaration :     string
     !************************************************
     !
-    TASK PERS string st_RRC_ChaTask:="T_ROB11";
+    TASK PERS string st_RRC_ChaTask:="T_ROB12";
     TASK PERS string st_RRC_EvLogMsgHeader:="RRC -- Controller";
     !
     TASK PERS string st_RRC_CyclicJob{n_RRC_NumOfCha}:=["r_RRC_GetJointT","","",""];

@@ -32,7 +32,7 @@ services:
     image: compasrrc/compas_rrc_driver:v1.1.2
     container_name: abb-driver-r11
     environment:
-      - ROS_HOSTNAME=abb-driver
+      - ROS_HOSTNAME=abb-driver-r11
       - ROS_MASTER_URI=http://ros-master:11311
     depends_on:
       - ros-master
@@ -44,13 +44,13 @@ services:
       - robot_ip:=192.168.0.11
       - robot_streaming_port:=30101
       - robot_state_port:=30201
-      - namespace:=rob1
+      - namespace:=rob11
 
   abb-driver-r12:
     image: compasrrc/compas_rrc_driver:v1.1.2
     container_name: abb-driver-r12
     environment:
-      - ROS_HOSTNAME=abb-driver
+      - ROS_HOSTNAME=abb-driver-r12
       - ROS_MASTER_URI=http://ros-master:11311
     depends_on:
       - ros-master
@@ -62,4 +62,4 @@ services:
       - robot_ip:=192.168.0.11
       - robot_streaming_port:=30102
       - robot_state_port:=30202
-      - namespace:=rob2
+      - namespace:=rob12

@@ -6,7 +6,7 @@ ros = rrc.RosClient()
 ros.run()
 
 # Create ABB Client
-abb = rrc.AbbClient(ros, '/rob1')
+abb = rrc.AbbClient(ros, '/rob12')
 print('Connected')
 
 

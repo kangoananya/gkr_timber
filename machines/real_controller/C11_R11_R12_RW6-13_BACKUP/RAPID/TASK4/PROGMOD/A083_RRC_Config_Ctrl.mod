@@ -78,7 +78,7 @@ MODULE A083_RRC_Config_Ctrl
         b_RRC_LogPro{n_RRC_R1_ChaNr}:=FALSE;
         !
         ! Roboter 2
-        b_RRC_Com{n_RRC_R2_ChaNr}:=FALSE;
+        b_RRC_Com{n_RRC_R2_ChaNr}:=TRUE;
         b_RRC_SIDCheck{n_RRC_R2_ChaNr}:=TRUE;
         b_RRC_SIDErrorStop{n_RRC_R2_ChaNr}:=FALSE;
         b_RRC_LogPro{n_RRC_R2_ChaNr}:=FALSE;

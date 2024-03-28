@@ -45,7 +45,7 @@ MODULE RRC_DataTask_Rx(SYSMODULE)
     TASK PERS bool b_RRC_BufFullRob{n_RRC_NumOfCha}:=[FALSE,FALSE,FALSE,FALSE];
     TASK PERS bool b_RRC_LogHelper{n_RRC_NumOfCha}:=[FALSE,FALSE,FALSE,FALSE];
     !
-    TASK PERS bool b_RRC_FirstProtocolAfterPPMain:=TRUE;
+    TASK PERS bool b_RRC_FirstProtocolAfterPPMain:=FALSE;
 
     !************************************************
     ! Declaration :     num
@@ -57,8 +57,8 @@ MODULE RRC_DataTask_Rx(SYSMODULE)
     CONST num n_RRC_TimeOutRecRobSocRec:=10;
     !
     TASK PERS num n_RRC_WritePtrBufCtrl{n_RRC_NumOfCha}:=[0,0,0,0];
-    TASK PERS num n_RRC_WritePtrBufRob{n_RRC_NumOfCha}:=[0,0,0,0];
-    TASK PERS num n_RRC_SIDExpected{n_RRC_NumOfCha}:=[0,0,0,0];
+    TASK PERS num n_RRC_WritePtrBufRob{n_RRC_NumOfCha}:=[0,8,0,0];
+    TASK PERS num n_RRC_SIDExpected{n_RRC_NumOfCha}:=[0,4,0,0];
     TASK PERS num n_RRC_SIDIs{n_RRC_NumOfCha}:=[70001,0,0,0];
     !
     VAR num n_RRC_MsgLenRob{n_RRC_NumOfCha};
@@ -105,7 +105,7 @@ MODULE RRC_DataTask_Rx(SYSMODULE)
     !
     TASK PERS RRC_Protocol pro_RRC_ActMsgRec{n_RRC_NumOfCha}:=[
     [[89,2,1.7105E+09,934],[219,0,21,"r_A073_MoveGantrySync",1,0,"",0,0,0,"",0,"",0,"",0,"",0,"",0,"",0,"",0,"",5,25268.6,3965.36,500,50,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],
-    [[67,2,1.7105E+09,934],[213,0,19,"r_A073_FollowGantry",1,0,"",0,0,0,"",0,"",0,"",0,"",0,"",0,"",0,"",0,"",0,25268.6,3965.36,2100,50,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],
+    [[66,2,1.71163E+09,483],[4,0,14,"r_RRC_WaitTime",1,0,"",0,0,16,"doUnitR12ValveB1",0,"",0,"",0,"",0,"",0,"",0,"",0,"",1,1.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],
     [[120,4,1.55775E+09,695],[11,0,12,"r_RRC_MoveL",1,0,"",0,0,0,"",0,"",0,"",0,"",0,"",0,"",0,"",0,"",15,542.04,-200,237.57,0,0,1,0,28000,-3400,-3138,0,0,0,230,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],
     [[120,4,1.55775E+09,695],[11,0,12,"r_RRC_MoveL",1,0,"",0,0,0,"",0,"",0,"",0,"",0,"",0,"",0,"",0,"",15,542.04,-200,237.57,0,0,1,0,28000,-3400,-3138,0,0,0,230,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]];
 

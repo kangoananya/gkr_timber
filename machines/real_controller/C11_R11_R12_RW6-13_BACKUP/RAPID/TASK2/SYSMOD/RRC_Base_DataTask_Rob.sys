@@ -37,7 +37,7 @@ MODULE RRC_Base_DataTask_Rob (SYSMODULE)
     !
     TASK PERS num n_RRC_Answer:=0;
     TASK PERS num n_RRC_Act_S_ID:=4;
-    TASK PERS num n_RRC_Time:=1;
+    TASK PERS num n_RRC_Time:=1.5;
     TASK PERS num n_RRC_Acc:=5;
     TASK PERS num n_RRC_Ramp:=5;
     TASK PERS num n_RRC_Override:=100;
@@ -60,7 +60,7 @@ MODULE RRC_Base_DataTask_Rob (SYSMODULE)
     TASK PERS string st_RRC_ActBtn4:="";
     TASK PERS string st_RRC_ActBtn5:="";
     TASK PERS string st_RRC_Header:="Update Speed";
-    TASK PERS string st_RRC_TPWrite:="Welcome to COMPAS_RRC 2";
+    TASK PERS string st_RRC_TPWrite:="13:40:48 - Closing Gripper";
     TASK PERS string st_RRC_StringValue:="Custom Text";
 
     !************************************************
